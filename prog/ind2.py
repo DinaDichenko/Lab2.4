@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
+
 if __name__ == '__main__':
     A = list(map(float, input("Enter a list items:").split()))
     min_A = 10**6
+    count = 0
+
+    for i in range(0, len(A)):
+        if A[i] < 0:
+            count += 1
+    if count < 2:
+        print("Not enough negative elements", file=sys.stderr)
+        exit(1)
     count = 0
 
     for i in range(0, len(A)):
@@ -25,4 +35,3 @@ if __name__ == '__main__':
     print(
         "The number of the minimum list item:", min_A, "\nSum =", s, "\nSorted list:", sorted(A, key=abs)
           )
-
