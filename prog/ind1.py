@@ -12,9 +12,9 @@ if __name__ == '__main__':
         print("Invalid list size", file=sys.stderr)
         exit(1)
 
-    for i in range(0, len(A)):
-        if A[i] < 0:
-            s *= A[i]
+    for i, item in enumerate(A):
+        if item < 0:
+            s *= item
             count += 1
     if count == 0:
         s = 0

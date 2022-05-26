@@ -8,24 +8,24 @@ if __name__ == '__main__':
     min_A = 10**6
     count = 0
 
-    for i in range(0, len(A)):
-        if A[i] < 0:
+    for i, item in enumerate(A):
+        if item < 0:
             count += 1
     if count < 2:
         print("Not enough negative elements", file=sys.stderr)
         exit(1)
     count = 0
 
-    for i in range(0, len(A)):
-        if A[i] < min_A:
-            min_A = A[i]
-        if A[i] < 0 and count < 1:
+    for i, item in enumerate(A):
+        if item < min_A:
+            min_A = item
+        if item < 0 and count < 1:
             count += 1
             gr1 = i
     count = 0
 
-    for i in range(0, len(A)):
-        if A[i] < 0 and count < 2:
+    for i, item in enumerate(A):
+        if item < 0 and count < 2:
             count += 1
             gr2 = i
 
