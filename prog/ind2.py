@@ -30,8 +30,8 @@ if __name__ == '__main__':
             gr2 = i
 
     s = 0
-    for j in range(gr1 + 1, gr2):
-        s += A[j]
+    for j, item in enumerate(A[gr1 + 1: gr2]):
+        s += item
     print(
         "The number of the minimum list item:", min_A, "\nSum =", s, "\nSorted list:", sorted(A, key=abs)
           )
